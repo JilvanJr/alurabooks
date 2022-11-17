@@ -1,0 +1,60 @@
+.cabecalho__menu-hamburguer {
+    width: 24px;
+    height: 24px;
+    background-image: url("../img/Menu.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block; /*se fosse so inline nao iria permitir mexer na altura/largura*/
+}
+
+.lista-menu {
+    display: none;
+    position: absolute; /* 1- permite movimentar o elemento de acordo com o elemento pai que é diferente de position static */
+    top: 100%; /*tirou 100% do cabeçalho e ficou embaixo*/
+    width: 60vw; /*vw pega a largura da tela*/
+}
+
+.container__botao:checked ~ .lista-menu { /*detecta se o input esta selecionado e a ação após clique abre menu*/
+    display: block;
+}
+
+.container__botao {
+    display: none;
+}
+
+.cabecalho {
+    background-color: var(--cor-branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /* 1- posso colocar outros elementos como top/right/left/down*/
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.container__imagem {
+    padding: 1em;
+}
+
+.lista-menu__titulo, 
+.lista-menu__item {
+    padding: 1em;
+    background-color: var(--cor-branco);
+}
+
+.lista-menu__titulo {
+    color: var(--cor-laranja);
+    font-weight: 700;
+}
+
+.lista-menu__link {
+    background: var(--cor-azul-degrade);
+    -webkit-background-clip: text; /*webkit é pra funcionar em outros navegadores*/
+    -webkit-text-fill-color: transparent;
+    background-clip: text; /*por ser cor linear, nao aplica na fonte, isso faz prender a cor apenas onde tem texto*/
+    text-transform: uppercase; /*maiusculo*/
+}
+
