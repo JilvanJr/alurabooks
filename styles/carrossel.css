@@ -77,6 +77,10 @@
     text-decoration: none;
 }
 
+.botoes__ancora:active {
+    background-color: var(--cor-azul);
+}
+
 .descricao__imagem-estrela {
     padding-bottom: 0.7em;
 }

@@ -51,4 +51,9 @@
     .topicos {
         padding: 3em 25vw;
     }
+
+    .topicos__link:hover {
+        color: var(--cor-laranja);
+        background-color: var(--cor-branco);
+    }
 }
