@@ -10,7 +10,7 @@
 .lista-menu {
     display: none;
     position: absolute; /* 1- permite movimentar o elemento de acordo com o elemento pai que é diferente de position static */
-    top: 100%; /*tirou 100% do cabeçalho e ficou embaixo*/
+    top: 85%; /*tirou 85% do cabeçalho e ficou embaixo*/
     width: 60vw; /*vw pega a largura da tela*/
 }
 
@@ -45,6 +45,10 @@
     background-color: var(--cor-branco);
 }
 
+.lista-menu__item:hover {
+    background: var(--cor-laranja);
+}
+
 .lista-menu__titulo {
     color: var(--cor-laranja);
     font-weight: 700;
@@ -65,6 +69,11 @@
 .opcoes {
     display: none;
 }
+
+.container__texto {
+    display: none;
+}
+
 
 @media screen and (min-width: 1024px) {
 
@@ -113,4 +122,31 @@
     .opcoes__botao {
         display: none;
     }
+}
+
+@media screen and (min-width: 1728px) {
+
+    .cabecalho {
+        padding: 0 2em;
+    }
+
+    .opcoes {
+        margin-right: auto; /*preencheu todo lado direito, com isso fui tudo empurrado para esquerda*/
+    }
+
+    .container {
+        margin-right: 2em;
+    }
+
+    .container__texto {
+        display: block;
+    }
+
+    .container__link {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: var(--cor-preto);
+    }
+
 }
